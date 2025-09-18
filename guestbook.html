@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>GuestBook Entries</h2>
+<ul>
+    {% for entry in session.guestbook %}
+        <li>{{ entry.name }} signed at {{ entry.time }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
